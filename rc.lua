@@ -278,6 +278,13 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
+    -- Custom
+    awful.key({ modkey, "Shift"   }, "s",
+        function ()
+            awful.spawn.with_shell("~/.config/awesome/screenshot.sh")
+        end,
+        {description = "focus previous by index", group = "client"}
+    ),
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "client"}),
